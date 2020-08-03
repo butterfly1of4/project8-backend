@@ -11,9 +11,15 @@ fetch(url, {
     "x-rapidapi-key": "7b69d66b85msh7236a1c64065cd8p1a3691jsn6633347a700d",
   },
 })
-  .then((response) => {
-    console.log(response);
-  })
-  .catch((err) => {
-    console.log(err);
+  .then((res) => res.json())
+  .then((res) => {
+    let newReleases = JSON.stringify(res);
+    console.log(movies);
+    fs.writeFile("./db/newReleases.json", newReleases, (err) => {
+      if (err) {
+        console.log(err);
+      } else {
+        console.log("success");
+      }
+    });
   });
