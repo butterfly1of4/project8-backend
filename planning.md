@@ -1,7 +1,7 @@
 
-PROJECT 8
+#PROJECT 8
 
-API
+##API
 We are using the: uNogsNG: api  
 View and search by expiring and upcoming movies
 
@@ -90,3 +90,11 @@ FRONTEND:
 Component library- Storybook
 LANDING PAGE:
 MOVIES PAGE/S:
+
+To-do:
+API: fetch: NewRelease, Expiring
+
+
+Alex: 
+Michael:
+Jennifer:
