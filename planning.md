@@ -7,7 +7,7 @@ View and search by expiring and upcoming movies
 
 # SCHEMA
 
-    ##New:
+    ## New:
     1. netflixid
     2. title
     3. image
@@ -15,7 +15,7 @@ View and search by expiring and upcoming movies
     5. synopsis
     6. release year
 
-    ##Expiring:
+    ## Expiring:
     1. netflixid
     2. title
     3. image
