@@ -1,65 +1,59 @@
+# PROJECT 8
 
-#PROJECT 8
+## API
 
-##API
 We are using the: uNogsNG: api  
 View and search by expiring and upcoming movies
 
-SCHEMA
-New:
-	netflixid
-	title
-	image
-	expiring date
-	synopsis
-	release year
-EXPIRING
-netflixid
-	title
-	image
-	expiring date
-	synopsis
-	release year
+# SCHEMA
 
+	##NewReleases:
+    1. netflixid: String
+    2. title: String
+    3. image: String
+    4. expiring date: String
+    5. synopsis: String
+    6. release year: String
 
-HOME PAGE:	
-navbar elements: 
-	-sticky across all pages
-	-search bar
-	-search button
-	-new release button
-	-expiring release button
-	-logo?
-	-create button
-movie theater backdrop
+    ##Expiring:
+    1. netflixid: String
+    2. title: String
+    3. image: String
+    4. expiring date: String
+    5. synopsis: String
+    6. release year: String
 
-Functionality:
+# HOME PAGE:
 
-The create will be a dropdown form with add: title, synopsis, imageurl
+    Navbar elements:
+    - static across all pages
+    - Generic Movie Logo
+    - Search bar with functionality
+    - New Release button
+    - Expiring Release button
+    - Create button
+    - Movie theater backdrop
+
+# Functionality:
+
+The create will be a form with add: title, synopsis, imageurl
 The search field will track the input to complete auto-fill
 The New and Expiring buttons will lead to the pages with the contents
 The Search button will search by Year and Title
 Searching will open a new page with the infromation
 
+# MOVIE PAGE:
 
+Either Grid layout or Scrolling
+Functionality:
 
+1 panel for each movie: - modal popup with the: synopsis, title
+\*\*maybe use Semantic for modal - Edit and Delete options on popup - Info button on each image not in modal
 
+# TESTING WITH JEST:
 
-MOVIE PAGE
-Either Grid layout  or Scrolling
-Functionality: 
+# INSTALL:
 
-1 panel for each movie:
-	-modal popup with the: synopsis, title
-	**maybe use Semantic for modal
--Edit and Delete options on popup 
-	-info button on each image not in modal
-
-
-
-TESTING WITH JEST
-
-INSTALL:
 Node
 React-router-DOM
 React-router
@@ -70,20 +64,20 @@ CORS
 readme
 mkdir planning
 
-EXTRAS: Semantic, Axios, 
-
+EXTRAS: Semantic, Axios,
 
 BACKEND:
 Heroku
 API Fetch/Axios
-
 JSON
 2 Models- Schema above
 Routes
 DB folder:
 Cluster-Mongo Atlas
 Seed project through Heroku
+
 ---
+
 index.js
 
 FRONTEND:
@@ -95,6 +89,8 @@ To-do:
 API: fetch: NewRelease, Expiring
 
 
+Alex:
+=======
+GIT WORKFLOW: Git Branching
 Alex: 
-Michael:
-Jennifer:
+
