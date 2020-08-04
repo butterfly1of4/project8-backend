@@ -22,22 +22,7 @@ View and search by expiring and upcoming movies
     4. expiring date
     5. synopsis
     6. release year
-	##NewReleases:
-    1. netflixid: String
-    2. title: String
-    3. image: String
-    4. expiring date: String
-    5. synopsis: String
-    6. release year: String
-
-    ##Expiring:
-    1. netflixid: String
-    2. title: String
-    3. image: String
-    4. expiring date: String
-    5. synopsis: String
-    6. release year: String
-
+	
 # HOME PAGE:
 
     Navbar elements:
@@ -59,13 +44,16 @@ Searching will open a new page with the infromation
 
 # MOVIE PAGE:
 
-Either Grid layout or Scrolling
+Grid layout
 Functionality:
 
 1 panel for each movie: - modal popup with the: synopsis, title
 \*\*maybe use Semantic for modal - Edit and Delete options on popup - Info button on each image not in modal
 
 # TESTING WITH JEST:
+
+
+
 
 # INSTALL:
 
@@ -101,11 +89,10 @@ LANDING PAGE:
 MOVIES PAGE/S:
 
 To-do:
-API: fetch: NewRelease, Expiring
+API: fetch: NewRelease, Expiring - DONE
+Styling: 
+	* Homepage
+	* Modals
+	* Nav-bar
 
-
-Alex:
-=======
-GIT WORKFLOW: Git Branching
-Alex: 
 

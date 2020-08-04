@@ -3,8 +3,7 @@ const Expiring = require("../models/Expiring");
 const expiredJson = require("../db/expired.json");
 const releasesJson = require("../db/newReleases.json");
 
-
-const manyReleases = data.releases.map((item) => {
+const manyReleases = releasesJson.ITEMS.map((item) => {
   const release = {};
   release.netflixid = item.netflixid;
   release.title = item.title;
