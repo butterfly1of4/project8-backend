@@ -59,6 +59,13 @@ app.put("/release/:synopsis", (req, res) => {
 })
 
 //DELETE Request
+app.delete("/release/:title", (req, res) => {
+  NewReleases.findOneAndDelete({ title: req.params.title})
+  .then((release) => {
+    res.json(release)
+  })
+})
+
 
 app.set("port", process.env.PORT || 3000)
 
