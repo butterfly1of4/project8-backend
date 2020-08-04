@@ -28,7 +28,11 @@ app.get("/", (req, res) => {
     })
   });
 
-
+//GET BY TITLE-Releases
+app.get("/title/:title", (req, res) => {
+  NewReleases.find({ title: req.params.title }).then((release) => {
+    res.json(release)
+})
 
 
 app.set("port", process.env.PORT || 3000);
