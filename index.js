@@ -29,11 +29,30 @@ app.get("/", (req, res) => {
   });
 
 //GET BY TITLE-Releases
-app.get("/title/:title", (req, res) => {
+app.get("/release/title/:title", (req, res) => {
   NewReleases.find({ title: req.params.title }).then((release) => {
     res.json(release)
 })
 })
+
+//GET BY TITLE-Expiring
+app.get("/expire/title/:title", (req, res) => {
+  Expiring.find({ title: req.params.title }).then((expire) => {
+    res.json(expire)
+})
+})
+
+//POST Request
+app.post("/release/newMovie", (req, res) => {
+  NewReleases.create(req.body).then((release) => {
+    res.json(release)
+  }) 
+})
+
+//PUT Request
+
+
+//DELETE Request
 
 app.set("port", process.env.PORT || 3000)
 
