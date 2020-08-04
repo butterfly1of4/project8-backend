@@ -22,6 +22,21 @@ View and search by expiring and upcoming movies
     4. expiring date
     5. synopsis
     6. release year
+	##NewReleases:
+    1. netflixid: String
+    2. title: String
+    3. image: String
+    4. expiring date: String
+    5. synopsis: String
+    6. release year: String
+
+    ##Expiring:
+    1. netflixid: String
+    2. title: String
+    3. image: String
+    4. expiring date: String
+    5. synopsis: String
+    6. release year: String
 
 # HOME PAGE:
 
@@ -88,6 +103,9 @@ MOVIES PAGE/S:
 To-do:
 API: fetch: NewRelease, Expiring
 
+
 Alex:
-Michael:
-Jennifer:
+=======
+GIT WORKFLOW: Git Branching
+Alex: 
+

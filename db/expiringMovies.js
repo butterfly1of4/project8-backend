@@ -2,7 +2,7 @@ const fetch = require("node-fetch");
 const fs = require("fs");
 
 const url =
-  "https://unogs-unogs-v1.p.rapidapi.com/aaapi.cgi?q=get%3Anew7%3AUS&p=1&t=ns&st=adv";
+  "https://unogs-unogs-v1.p.rapidapi.com/aaapi.cgi?q=get%3Aexp%3AUS&t=ns&st=adv&p=1";
 
 fetch(url, {
   method: "GET",
@@ -13,9 +13,9 @@ fetch(url, {
 })
   .then((res) => res.json())
   .then((res) => {
-    let newReleases = JSON.stringify(res);
-    console.log(newReleases);
-    fs.writeFile("./db/newReleases.json", newReleases, (err) => {
+    let expired = JSON.stringify(res);
+    console.log(expired);
+    fs.writeFile("./db/expired.json", expired, (err) => {
       if (err) {
         console.log(err);
       } else {
