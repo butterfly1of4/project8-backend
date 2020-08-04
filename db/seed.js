@@ -29,10 +29,10 @@ NewReleases.deleteMany({}).then(() => {
 const manyExpires = expiredJson.ITEMS.map((item) => {
   const expire = {};
   expire.netflixid = item.netflixid;
-  release.title = item.title;
-  release.image = item.image;
-  release.synposis = item.synposis;
-  release.unogsdate = item.unogsdate;
+  expire.title = item.title;
+  expire.image = item.image;
+  expire.synposis = item.synposis;
+  expire.unogsdate = item.unogsdate;
   return expire;
 });
 
