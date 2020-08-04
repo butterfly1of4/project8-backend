@@ -1,4 +1,10 @@
 ## **Project-8: Back-end**
+<<<<<<< HEAD
+[Heroku Link]: (https://project8-backend.herokuapp.com/)
+=======
+[Heroku Link]: (project8-backend.herokuapp.com)
+
+>>>>>>> d2f92021d8b420d59748b2754be1034c98cf3bc0
 
 ## UNOGS API
 
@@ -33,5 +39,5 @@
     * Search: search by the year a movie was made or name of movie
     * Update:
     * Delete: delete a movie from the database
-
+    
 # Issues
