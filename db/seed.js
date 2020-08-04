@@ -8,22 +8,21 @@ const manyReleases = releasesJson.ITEMS.map((item) => {
   release.netflixid = item.netflixid;
   release.title = item.title;
   release.image = item.image;
-  release.synposis = item.synposis;
+  release.synopsis = item.synopsis;
   release.released = item.released;
   release.unogsdate = item.unogsdate;
   return release;
 });
 
 NewReleases.deleteMany({}).then(() => {
-  NewReleases.create(manyReleases)
-    .then((manyReleases) => {
-      console.log(manyReleases);
-      //   process.exit();
-    })
-    .catch((err) => {
-      console.log(err);
-      //   process.exit();
-    });
+  NewReleases.create(manyReleases).then((manyReleases) => {
+    console.log(manyReleases);
+    process.exit();
+  });
+  // .catch((err) => {
+  //   console.log(err);
+  //   process.exit();
+  // });
 });
 
 const manyExpires = expiredJson.ITEMS.map((item) => {
@@ -31,19 +30,18 @@ const manyExpires = expiredJson.ITEMS.map((item) => {
   expire.netflixid = item.netflixid;
   expire.title = item.title;
   expire.image = item.image;
-  expire.synposis = item.synposis;
+  expire.synopsis = item.synopsis;
   expire.unogsdate = item.unogsdate;
   return expire;
 });
 
 Expiring.deleteMany({}).then(() => {
-  Expiring.create(manyExpires)
-    .then((ManyExpires) => {
-      console.log(ManyExpires);
-      process.exit();
-    })
-    .catch((err) => {
-      console.log(err);
-      process.exit();
-    });
+  Expiring.create(manyExpires).then((ManyExpires) => {
+    console.log(ManyExpires);
+    process.exit();
+  });
+  // .catch((err) => {
+  //   console.log(err);
+  //   process.exit();
+  // });
 });
