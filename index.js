@@ -1,6 +1,5 @@
 const cors = require("cors");
 const app = require("express")();
-
 const bodyParser = require("body-parser");
 const Expiring = require("./models/Expiring");
 const NewReleases = require("./models/NewReleases");
@@ -17,7 +16,7 @@ app.get("/", (req, res) => {
   });
   
   app.get("/expire", (req, res) => {
-    NewReleases.find({}).then((expire) => {
+   Expiring.find({}).then((expire) => {
       res.json(expire)
     })
   });
