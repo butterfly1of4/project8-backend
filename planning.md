@@ -7,21 +7,21 @@ View and search by expiring and upcoming movies
 
 # SCHEMA
 
-    ##New:
-    1. netflixid
-    2. title
-    3. image
-    4. expiring date
-    5. synopsis
-    6. release year
+	##NewReleases:
+    1. netflixid: String
+    2. title: String
+    3. image: String
+    4. expiring date: String
+    5. synopsis: String
+    6. release year: String
 
     ##Expiring:
-    1. netflixid
-    2. title
-    3. image
-    4. expiring date
-    5. synopsis
-    6. release year
+    1. netflixid: String
+    2. title: String
+    3. image: String
+    4. expiring date: String
+    5. synopsis: String
+    6. release year: String
 
 # HOME PAGE:
 
