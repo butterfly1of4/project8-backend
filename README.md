@@ -16,7 +16,6 @@
     * CORS
     * Body-parser
     * React
-    
 
 # Components
 
@@ -32,5 +31,7 @@
 # Functions
 
     * Search: search by the year a movie was made or name of movie
-    * Update: 
+    * Update:
     * Delete: delete a movie from the database
+
+# Issues
