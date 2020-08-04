@@ -1,12 +1,11 @@
-const cors = require("cors")
+const cors = require("cors");
 const app = require("express")();
-app.use(cors())
+
 const bodyParser = require("body-parser");
-app.use(bodyParser.json());
-const Expiring = require('./models/Expiring')
-const NewReleases = require('./models/NewReleases')
+const Expiring = require("./models/Expiring");
+const NewReleases = require("./models/NewReleases");
 
-
+<<<<<<< HEAD
 app.get("/", (req, res) => {
     res.send("This is a GET route");
   });
@@ -23,18 +22,20 @@ app.get("/", (req, res) => {
       res.json(expire)
     })
   });
+=======
+>>>>>>> d7de2bbd458aac1513739157284756bb886788e2
 
 
-//Heroku Access
-  app.set("port", process.env.PORT || 8080);
 
-  app.listen(app.get("port"), () => {
-    console.log(`✅ PORT: ${app.get("port")} 🌟`);
-  });
+app.use(cors());
+app.use(bodyParser.json());
 
-//Local Access
-// app.listen(3000, () => {
-//     console.log('listening')
-// })
+app.get("/", (req, res) => {
+  res.send("This is a GET route");
+});
 
+app.set("port", process.env.PORT || 3000);
 
+app.listen(app.get("port"), () => {
+  console.log(`✅ PORT: ${app.get("port")} 🌟`);
+});
