@@ -88,6 +88,9 @@ MOVIES PAGE/S:
 To-do:
 API: fetch: NewRelease, Expiring
 
+
 Alex:
-Michael:
-Jennifer:
+=======
+GIT WORKFLOW: Git Branching
+Alex: 
+
