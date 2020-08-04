@@ -1,7 +1,9 @@
 const NewReleases = require("../models/NewReleases");
 const Expiring = require("../models/Expiring");
+const expiredJson = require("./expired.json");
+const releasesJson = require("../db/newReleases.json");
 
-const manyReleases = data.releases.map((item) => {
+const manyReleases = releasesJson.items.map((item) => {
   const release = {};
   release.netflixid = item.netflixid;
   release.title = item.title;
@@ -14,8 +16,8 @@ const manyReleases = data.releases.map((item) => {
 
 NewReleases.deleteMany({}).then(() => {
   NewReleases.create(manyReleases)
-    .then((releases) => {
-      console.log(releases);
+    .then((manyReleases) => {
+      console.log(manyReleases);
       process.exit();
     })
     .catch((err) => {
@@ -24,7 +26,7 @@ NewReleases.deleteMany({}).then(() => {
     });
 });
 
-const manyExpires = data.expires.map((item) => {
+const manyExpires = data[0].expiredJson.items.map((item) => {
   const expire = {};
   release.netflixid = item.netflixid;
   release.title = item.title;
@@ -34,10 +36,10 @@ const manyExpires = data.expires.map((item) => {
   return expire;
 });
 
-Expiring.deleteMany({}).then(() => {
-  Expiring.create(manyExpires)
-    .then((expires) => {
-      console.log(expires);
+Expired.deleteMany({}).then(() => {
+  Expired.create(manyExpires)
+    .then((ManyExpires) => {
+      console.log(ManyExpires);
       process.exit();
     })
     .catch((err) => {
