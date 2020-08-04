@@ -43,14 +43,20 @@ app.get("/expire/title/:title", (req, res) => {
 })
 
 //POST Request
-app.post("/release/newMovie", (req, res) => {
+app.post("/release/", (req, res) => {
   NewReleases.create(req.body).then((release) => {
     res.json(release)
   }) 
 })
 
 //PUT Request
-
+app.put("/release/:synopsis", (req, res) => {
+  NewReleases.findByIdAndUpdate({ synopsis: req.params.synopsis},req.body, {
+    new:true,
+  }).then((release) => {
+    res.json(release)
+  })
+})
 
 //DELETE Request
 
