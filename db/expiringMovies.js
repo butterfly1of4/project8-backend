@@ -14,12 +14,14 @@ fetch(url, {
   .then((res) => res.json())
   .then((res) => {
     let expired = JSON.stringify(res);
-    console.log(movies);
+    console.log(expired);
     fs.writeFile("./db/expired.json", expired, (err) => {
       if (err) {
         console.log(err);
       } else {
         console.log("success");
       }
+    }).catch((err) => {
+      console.log(err);
     });
   });
