@@ -5,7 +5,6 @@ const bodyParser = require("body-parser");
 const Expiring = require("./models/Expiring");
 const NewReleases = require("./models/NewReleases");
 
-<<<<<<< HEAD
 app.get("/", (req, res) => {
     res.send("This is a GET route");
   });
@@ -22,8 +21,6 @@ app.get("/", (req, res) => {
       res.json(expire)
     })
   });
-=======
->>>>>>> d7de2bbd458aac1513739157284756bb886788e2
 
 
 
