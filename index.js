@@ -18,6 +18,11 @@ app.get("/", (req, res) => {
     })
   });
   
+  app.get("/expire", (req, res) => {
+    NewReleases.find({}).then((expire) => {
+      res.json(expire)
+    })
+  });
 
 
 //Heroku Access
