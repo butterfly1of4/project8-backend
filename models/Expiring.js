@@ -9,4 +9,4 @@ const Expiring = new Schema({
     synopsis: String,
     unogsdate: String
 })
-module.exports = mongoose.model("Expiring",Expiring)
+module.exports = mongoose.model("Expiring", Expiring)
