@@ -109,3 +109,4 @@ Alex:
 GIT WORKFLOW: Git Branching
 Alex: 
 
+ heroku config:set DB_URL='mongodb+srv://project8:project8@project8.dzxpw.mongodb.net/project8?retryWrites=true&w=majority'
