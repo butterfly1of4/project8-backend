@@ -8,6 +8,16 @@
 
     user authentication?
 
+# Installations
+
+    * Node
+    * Express
+    * Mongoose
+    * CORS
+    * Body-parser
+    * React
+    
+
 # Components
 
     * Expiring:
@@ -22,3 +32,5 @@
 # Functions
 
     * Search: search by the year a movie was made or name of movie
+    * Update: 
+    * Delete: delete a movie from the database
