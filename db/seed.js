@@ -13,16 +13,15 @@ const manyReleases = releasesJson.ITEMS.map((item) => {
   release.unogsdate = item.unogsdate;
   return release;
 });
-
+console.log(manyReleases);
 NewReleases.deleteMany({}).then(() => {
-  NewReleases.create(manyReleases).then((manyReleases) => {
-    console.log(manyReleases);
-    process.exit();
-  });
-  // .catch((err) => {
-  //   console.log(err);
-  //   process.exit();
-  // });
+  NewReleases.create(manyReleases)
+    .then((results) => {
+      console.log(results);
+    })
+    .catch((err) => {
+      console.log(err);
+    });
 });
 
 const manyExpires = expiredJson.ITEMS.map((item) => {
@@ -34,14 +33,13 @@ const manyExpires = expiredJson.ITEMS.map((item) => {
   expire.unogsdate = item.unogsdate;
   return expire;
 });
-
+console.log(manyExpires);
 Expiring.deleteMany({}).then(() => {
-  Expiring.create(manyExpires).then((ManyExpires) => {
-    console.log(ManyExpires);
-    process.exit();
-  });
-  // .catch((err) => {
-  //   console.log(err);
-  //   process.exit();
-  // });
+  Expiring.create(manyExpires).then(
+    ((manyExpires) => {
+      console.log(manyExpires);
+    }).catch((err) => {
+      console.log(err);
+    })
+  );
 });
