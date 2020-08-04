@@ -1,6 +1,6 @@
 const NewReleases = require("../models/NewReleases");
 const Expiring = require("../models/Expiring");
-const expiredJson = require("./expired.json");
+const expiredJson = require("../db/expired.json");
 const releasesJson = require("../db/newReleases.json");
 
 const manyReleases = releasesJson.items.map((item) => {
@@ -36,8 +36,8 @@ const manyExpires = data[0].expiredJson.items.map((item) => {
   return expire;
 });
 
-Expired.deleteMany({}).then(() => {
-  Expired.create(manyExpires)
+Expiring.deleteMany({}).then(() => {
+  Expiring.create(manyExpires)
     .then((ManyExpires) => {
       console.log(ManyExpires);
       process.exit();
