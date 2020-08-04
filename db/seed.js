@@ -18,11 +18,11 @@ NewReleases.deleteMany({}).then(() => {
   NewReleases.create(manyReleases)
     .then((manyReleases) => {
       console.log(manyReleases);
-      process.exit();
+      //   process.exit();
     })
     .catch((err) => {
       console.log(err);
-      process.exit();
+      //   process.exit();
     });
 });
 
