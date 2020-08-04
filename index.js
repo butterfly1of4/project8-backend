@@ -11,6 +11,15 @@ app.get("/", (req, res) => {
     res.send("This is a GET route");
   });
   
+  //GET All request
+  app.get("/release", (req, res) => {
+    NewReleases.find({}).then((release) => {
+      res.json(release)
+    })
+  });
+  
+
+
 //Heroku Access
   app.set("port", process.env.PORT || 8080);
 
