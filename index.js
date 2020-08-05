@@ -59,10 +59,10 @@ app.put("/release/:synopsis", (req, res) => {
 })
 
 //DELETE Request
-app.delete("/release/:title", (req, res) => {
-  NewReleases.findOneAndDelete({ title: req.params.title})
-  .then((release) => {
-    res.json(release)
+app.delete("/expire/:title", (req, res) => {
+  Expiring.findOneAndDelete({ title: req.params.title})
+  .then((expire) => {
+    res.json(expire)
   })
 })
 
