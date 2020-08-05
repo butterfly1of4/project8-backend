@@ -47,8 +47,8 @@ app.post("/release/title/:title", (req, res) => {
 });
 
 //PUT Request
-app.put("/release/:synopsis", (req, res) => {
-  NewReleases.findOneAndUpdate({ synopsis: req.params.synopsis},req.body, {
+app.put("/release/:title", (req, res) => {
+  NewReleases.findOneAndUpdate({ title: req.params.title},req.body, {
     new:true,
   }).then((release) => {
     res.json(release);
