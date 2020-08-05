@@ -51,7 +51,7 @@ app.post("/release/", (req, res) => {
 
 //PUT Request
 app.put("/release/:synopsis", (req, res) => {
-  NewReleases.findByIdAndUpdate({ synopsis: req.params.synopsis},req.body, {
+  NewReleases.findOneAndUpdate({ synopsis: req.params.synopsis},req.body, {
     new:true,
   }).then((release) => {
     res.json(release)
