@@ -48,8 +48,8 @@ app.post("/release/title/:title", (req, res) => {
 
 //PUT Request
 app.put("/release/:title", (req, res) => {
-  NewReleases.findOneAndUpdate({ title: req.params.title},req.body, {
-    new:true,
+  NewReleases.findOneAndUpdate({ title: req.params.title }, req.body, {
+    new: true,
   }).then((release) => {
     res.json(release);
   });
@@ -57,12 +57,10 @@ app.put("/release/:title", (req, res) => {
 
 //DELETE Request
 app.delete("/expire/:title", (req, res) => {
-  Expiring.findOneAndDelete({ title: req.params.title})
-  .then((expire) => {
-    res.json(expire)
-  })
-})
-
+  Expiring.findOneAndDelete({ title: req.params.title }).then((expire) => {
+    res.json(expire);
+  });
+});
 
 app.set("port", process.env.PORT || 3000);
 
