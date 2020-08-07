@@ -40,7 +40,7 @@ app.get("/expire/title/:title", (req, res) => {
 });
 
 //POST Request
-app.post("/release/title/:title", (req, res) => {
+app.post("/release/title/", (req, res) => {
   NewReleases.create(req.body).then((release) => {
     res.json(release);
   });
@@ -52,6 +52,12 @@ app.put("/release/:title", (req, res) => {
     new: true,
   }).then((release) => {
     res.json(release);
+  });
+});
+
+app.delete("/release/:title", (req, res) => {
+  NewReleases.findOneAndDelete({ title: req.params.title }).then((expire) => {
+    res.json(expire);
   });
 });
 
