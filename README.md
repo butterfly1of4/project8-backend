@@ -6,9 +6,6 @@
     * An API of all the new releases and expiring movies of the global Netflix catalog
     * API: [Link](https://rapidapi.com/unogs/api/unogs/details)
 
-
-    user authentication?
-
 # Installations
 
     * Node
@@ -17,22 +14,28 @@
     * CORS
     * Body-parser
     * React
+    * Heroku
 
 # Components
 
-    * Expiring:
-    * New Releases:
+    * Expiring
+    * New Releases
 
 # Routes
 
-    * Create: (/new), create a new movie
-    * New Releases: (/newreleases) shows all of the new release movies
+    * Create: (/update), create a new movie
+    * New Releases: (/newReleases) shows all of the new release movies
     * Expiring: (/expiring) shows all of the movies expiring
+    * Delete: (/release/:title) Deletes selected movie
+    * Update: (/release/:title) Updates title
 
 # Functions
 
-    * Search: search by the year a movie was made or name of movie
-    * Update:
-    * Delete: delete a movie from the database
+    * Info: Shows the synopsis of the movie onClick
+    * Update: Change the title of a movie
+    * Delete: Delete a movie from the database
+    * Create: Creates a new movie
     
 # Issues
+
+    Process exit threw an error, so it had to be deleted in order to seed the database. Only one database was appearing because the other was larger.
